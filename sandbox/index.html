@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- LEAFLET STYLES -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0/leaflet.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><h2>Leaflet Acceptance Sandbox</h2></header>
+    <div class="container">
+      <div id="map"></div>
+      <div class="button-group-container">
+        <div class="button-group">
+          <button id="addLayer">Add OSM Layer</button>
+          <div
+            class="button-status button-not-engaged"
+            id="addLayerStatus"
+          ></div>
+        </div>
+        <div class="button-group">
+          <button id="panMap">Pan Map</button>
+          <div class="button-status button-not-engaged" id="panMapStatus"></div>
+        </div>
+        <div class="button-group">
+          <button id="zoomMap">Zoom Map</button>
+          <div
+            class="button-status button-not-engaged"
+            id="zoomMapStatus"
+          ></div>
+        </div>
+        <div class="button-group">
+          <button id="addCycleLayer">Add Open Cycle Map Layer</button>
+          <div
+            class="button-status button-not-engaged"
+            id="addCycleLayerStatus"
+          ></div>
+        </div>
+        <div class="button-group">
+          <button id="addWMSLayer">Add WMS Layer</button>
+          <div
+            class="button-status button-not-engaged"
+            id="addWMSLayerStatus"
+          ></div>
+        </div>
+        <div class="button-group">
+          <button id="addMarker">Add Marker Layer</button>
+          <div
+            class="button-status button-not-engaged"
+            id="addMarkerStatus"
+          ></div>
+        </div>
+        <div class="button-group">
+          <button id="clickMarker">Click on Marker Layer</button>
+          <div
+            class="button-status button-not-engaged"
+            id="clickMarkerStatus"
+          ></div>
+        </div>
+        <h2>Values for Integration Tests</h2>
+        <div class="button-group">
+          <div class="infobox-label">Map Centre</div>
+          <input class="infobox-value" id="mapCenter" />
+        </div>
+        <div class="button-group">
+          <div class="infobox-label">Zoom Level</div>
+          <input class="infobox-value" id="zoomLevel" />
+        </div>
+        <div class="button-group">
+          <div class="infobox-label">Maptiks Trackcode</div>
+          <input class="infobox-value" id="trackingCode" />
+        </div>
+        <div class="button-group">
+          <div class="infobox-label">Bounding Box</div>
+          <input class="infobox-value" id="mapBounds" />
+        </div>
+        <div class="button-group">
+          <div class="infobox-label">Marker Location</div>
+          <input class="infobox-value" id="markerLocation" />
+        </div>
+      </div>
+    </div>
+
+    <!-- LEAFLET LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0/leaflet.js"></script>
+
+    <script src="lib.js"></script>
+
+    <script>
+      const trackCode = "5cb678f2-c81f-46e3-bce6-b7e40346fe60";
+      maptiks.trackcode = trackCode;
+      document.querySelector("#trackingCode").value = trackCode;
+    </script>
+    <script src="./index.js"></script>
+    <!-- MAP CODE -->
+  </body>
+</html>
