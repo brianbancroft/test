@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe -c 4 chrome:headless ./tests/** --app \"http-server . -p 3001 -s\"",
-    "test:ensure-fail": "testcafe -c 12 chrome:headless ./tests/** --app \"http-server . -p 3001 -s\"",
+    "test": "testcafe firefox:headless ./tests/** --app \"http-server . -p 3001 -s\"",
+    "test:ensure-fail": "testcafe -c 12 firefox:headless ./tests/** --app \"http-server . -p 3001 -s\"",
     "sandbox": "http-server . -p 3001"
   },
   "author": "Brian Bancroft <hello@brianbancroft.ca>",
